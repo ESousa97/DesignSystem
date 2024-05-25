@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build-storybook": "storybook build -o storybook-static",
+    "storybook": "start-storybook -p 6006",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run build-storybook",
     "start": "next start",
-    "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "14.2.3",
@@ -16,24 +16,20 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.4.0",
-    "@storybook/addon-essentials": "^8.1.2",
-    "@storybook/addon-interactions": "^8.1.2",
-    "@storybook/addon-links": "^8.1.2",
-    "@storybook/addon-onboarding": "^8.1.2",
-    "@storybook/blocks": "^8.1.2",
-    "@storybook/nextjs": "^8.1.2",
-    "@storybook/react": "^8.1.2",
-    "@storybook/test": "^8.1.2",
+    "@storybook/addon-actions": "^6.3.0",
+    "@storybook/addon-essentials": "^6.3.0",
+    "@storybook/addon-links": "^6.3.0",
+    "@storybook/react": "^6.3.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.3",
-    "eslint-plugin-storybook": "^0.8.0",
-    "postcss": "^8",
-    "storybook": "^8.1.2",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "@storybook/nextjs": "^8.1.2",
+    "@storybook/test": "^8.1.2",
+    "eslint-plugin-storybook": "^0.8.0"
   }
 }
