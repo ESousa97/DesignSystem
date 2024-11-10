@@ -1,109 +1,115 @@
+
 # ALFABIT-DESIGN-SYSTEM
 
-Este é um projeto [Next.js](https://nextjs.org/) inicializado com [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Badge Next.js](https://img.shields.io/badge/Next.js-v14.2.3-blue?style=flat-square) ![Badge Storybook](https://img.shields.io/badge/Storybook-v8.1.2-ff69b4?style=flat-square) ![Badge TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.4.1-06B6D4?style=flat-square)
 
-## Estrutura do Projeto
+ALFABIT-DESIGN-SYSTEM é um sistema de design moderno e modular construído com **Next.js**, **Storybook**, e **TailwindCSS**. Ele é projetado para facilitar a criação de interfaces consistentes, promovendo escalabilidade e colaboração.
 
-O projeto está organizado da seguinte forma:
+## 🌟 Demonstração
+Explore o projeto online: [ALFABIT-DESIGN-SYSTEM](https://design-system-gamma-lovat.vercel.app/?path=%2Fdocs%2Fmoleculas-button--docs)
 
-- **.next**: Diretório gerado pelo Next.js contendo arquivos de build e cache.
-- **.storybook**: Arquivos de configuração do Storybook.
-- **components**: Componentes divididos em subpastas (Button, Input, Link, TextBlock).
-- **fonts**: Arquivos de fontes.
-- **node_modules**: Dependências do projeto.
-- **pages**: Páginas da aplicação Next.js.
-- **public**: Arquivos públicos acessíveis.
-- **styles**: Arquivos de estilos (ex: `globals.css`).
+---
 
-## Iniciando o Desenvolvimento
+## 📂 Estrutura do Projeto
 
-Primeiro, inicie o servidor de desenvolvimento:
+- **.next**: Arquivos de build gerados pelo Next.js.
+- **.storybook**: Configurações do Storybook para desenvolvimento de componentes isolados.
+- **components**: Coleção de componentes reutilizáveis, divididos em subpastas:
+  - **Button**: Componente de botão com variações e documentação.
+  - **Input**: Componente de entrada de texto personalizável.
+  - **Link**: Link estilizado com suporte a navegação interna.
+  - **TextBlock**: Blocos de texto com diferentes estilos.
+- **fonts**: Fontes otimizadas, incluindo a fonte Mulish.
+- **pages**: Páginas do aplicativo Next.js, como `_app.tsx` e `index.tsx`.
+- **public**: Arquivos públicos, como favicon e ícones SVG.
+- **styles**: Arquivos CSS globais e configurações de TailwindCSS.
+- **storybook-static**: Build estática do Storybook.
 
-```bash
-npm run dev
-# ou
-yarn dev
-# ou
-pnpm dev
-# ou
-bun dev
-```
-Abra http://localhost:3000 no seu navegador para ver o resultado.
+---
 
-Você pode começar a editar a página modificando pages/index.tsx. A página é atualizada automaticamente conforme você edita o arquivo.
+## 🚀 Iniciando o Desenvolvimento
 
-# Storybook
+Para rodar o projeto localmente, siga estas etapas:
 
-Este projeto utiliza o Storybook para desenvolvimento de componentes isolados. Para iniciar o Storybook, utilize o comando:
+1. Clone o repositório e instale as dependências:
+   ```bash
+   npm install
+   ```
+2. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+3. Abra [http://localhost:3000](http://localhost:3000) no navegador para ver o projeto.
 
-```bash
-npm run storybook
-# ou
-yarn storybook
-# ou
-pnpm storybook
-# ou
-bun storybook
-```
-Abra http://localhost:6006 no seu navegador para visualizar o **Storybook**.
+---
 
-# Rotas de API
+## 📚 Storybook
 
-As API routes podem ser acessadas em http://localhost:3000/api/hello. Este endpoint pode ser editado em pages/api/hello.ts.
+Desenvolva e visualize componentes de forma isolada com o **Storybook**:
 
-O diretório pages/api é mapeado para /api/*. Arquivos neste diretório são tratados como API routes em vez de páginas React.
+- Para iniciar o Storybook:
+  ```bash
+  npm run storybook
+  ```
+- Acesse [http://localhost:6006](http://localhost:6006) para explorar os componentes.
 
-# Fontes
+---
 
-Este projeto utiliza next/font para otimizar e carregar automaticamente a fonte Mulish.
+## 📁 Scripts Disponíveis
 
-# Scripts Disponíveis
-- **dev**: Inicia o servidor de desenvolvimento Next.js.
-- **build**: Compila o projeto para produção.
-- **start**: Inicia o servidor em modo de produção.
-- **lint**: Executa o linter para verificar problemas no código.
-- **storybook**: Inicia o Storybook em modo de desenvolvimento.
-- **build-storybook**: Compila o Storybook para produção.
+- **dev**: Inicia o servidor de desenvolvimento.
+- **build**: Gera a build para produção.
+- **start**: Roda o servidor em produção.
+- **lint**: Verifica problemas no código com ESLint.
+- **storybook**: Inicia o Storybook.
+- **build-storybook**: Compila o Storybook para deploy.
 
-# Dependências
+---
 
-- **next**: "^14.2.3"
-- **react**: "^18"
-- **react-dom**: "^18"
+## 🌐 Rotas de API
 
-# Dependências de Desenvolvimento
+APIs do projeto estão disponíveis em: [http://localhost:3000/api/hello](http://localhost:3000/api/hello). As rotas estão localizadas em `pages/api` e podem ser expandidas conforme necessário.
 
-- @chromatic-com/storybook: "^1.4.0"
-- @storybook/addon-essentials: "^8.1.2"
-- @storybook/addon-interactions: "^8.1.2"
-- @storybook/addon-links: "^8.1.2"
-- @storybook/addon-onboarding: "^8.1.2"
-- @storybook/blocks: "^8.1.2"
-- @storybook/nextjs: "^8.1.2"
-- @storybook/react: "^8.1.2"
-- @storybook/test: "^8.1.2"
-- @types/node: "^20"
-- @types/react: "^18"
-- @types/react-dom: "^18"
-- eslint: "^8"
-- eslint-config-next: "14.2.3"
-- eslint-plugin-storybook: "^0.8.0"
-- postcss: "^8"
-- storybook: "^8.1.2"
-- tailwindcss: "^3.4.1"
-- typescript: "^5"
+---
 
-# Saiba Mais
+## 📦 Dependências
 
-Para saber mais sobre Next.js, confira os seguintes recursos:
+- **next**: `^14.2.3`
+- **react**: `^18`
+- **react-dom**: `^18`
+- **tailwindcss**: `^3.4.1`
 
-- [Documentação do Next.js](https://nextjs.org/docs) - aprenda sobre os recursos e a API do Next.js.
-- [Aprenda Next.js](https://nextjs.org/learn) - um tutorial interativo do Next.js.
+### 📦 Dependências de Desenvolvimento
 
-Você pode conferir o [repositório do Next.js no GitHub](https://github.com/vercel/next.js/) - seus feedbacks e contribuições são bem-vindos!
+- **storybook**: `^8.1.2`
+- **eslint**: `^8`
+- **typescript**: `^5`
 
-# Deploy na Vercel
+---
 
-A maneira mais fácil de fazer o deploy da sua aplicação Next.js é utilizando a [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) criada pelos desenvolvedores do Next.js.
+## 🎨 Estilização
 
-- Confira nossa [documentação de deploy do Next.js](https://nextjs.org/docs/deployment) para mais detalhes.
+A estilização é gerenciada com **TailwindCSS**, fornecendo uma maneira rápida e eficiente de aplicar estilos diretamente aos componentes.
+
+---
+
+## 🔍 Saiba Mais
+
+- **[Documentação do Next.js](https://nextjs.org/docs)**: Aprenda mais sobre Next.js.
+- **[Tutorial Interativo do Next.js](https://nextjs.org/learn)**: Um guia para iniciantes.
+- **[Storybook](https://storybook.js.org/docs/react/get-started/introduction)**: Guia para começar com Storybook.
+- **[TailwindCSS](https://tailwindcss.com/docs/installation)**: Documentação do TailwindCSS.
+
+---
+
+## 🚀 Deploy
+
+Desenvolvemos e hospedamos nossa aplicação na **Vercel** para garantir alta performance e facilidade de deploy. Consulte a [documentação de deploy](https://nextjs.org/docs/deployment) para saber mais.
+
+---
+
+## License
+
+Para verificar os termos de uso deste projeto, acesse o arquivo **[LICENSE](https://github.com/ESousa97/DesignSystem/LICENSE)**
+
+---
