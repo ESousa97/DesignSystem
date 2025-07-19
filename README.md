@@ -4,11 +4,11 @@
 
 <div align="center">
 
-![Demo do Design System](video/Designsytem.gif)
-
-**[🚀 Ver Demonstração Ao Vivo](https://design-system-gamma-lovat.vercel.app)**
+![Demo do Design System](video/Designsystem.gif)
 
 </div>
+
+**[🚀 Ver Demonstração Ao Vivo](https://design-system-gamma-lovat.vercel.app)**
 
 ---
 
