@@ -92,7 +92,7 @@ const App = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <Link href="/storybook" external>
+                <Link href="https://storybook.js.org" external>
                   <Button variant="outline" size="sm">
                     Storybook
                   </Button>
@@ -115,9 +115,6 @@ const App = () => {
               consistentes, escaláveis e de alta qualidade.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" icon={<FiArrowRight />} iconPosition="right">
-                Explorar Componentes
-              </Button>
               <Link href="#demo" variant="button" size="lg">
                 Ver Demonstração
               </Link>
@@ -130,7 +127,6 @@ const App = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-primary mb-4">
-                Componentes Poderosos
               </h2>
               <p className="text-lg text-gray-secondary max-w-2xl mx-auto">
                 Cada componente foi cuidadosamente projetado com foco em usabilidade,
