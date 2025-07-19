@@ -510,3 +510,6 @@ Este projeto está licenciado sob uma **Licença Customizada**. Consulte o arqui
 *Se este projeto foi útil para você, considere dar uma ⭐!*
 
 </div>
+
+
+> ✨ **Criado em:** 22 de mai. de 2024 às 21:41
