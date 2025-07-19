@@ -495,7 +495,7 @@ Este projeto está licenciado sob uma **Licença Customizada**. Consulte o arqui
 <div align="center">
 
 ### **Enoque Sousa**
-*Desenvolvedor Frontend & Design Systems Specialist*
+*Desenvolvedor Fullstack Specialist*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/enoque-sousa-bb89aa168/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ESousa97)
