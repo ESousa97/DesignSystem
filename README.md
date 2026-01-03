@@ -19,8 +19,6 @@ _Orquestrando Consistência e Escalabilidade Visual com Precisão Atômica._
 
 </div>
 
-
-
 ---
 
 ## 🎯 Visão Geral
