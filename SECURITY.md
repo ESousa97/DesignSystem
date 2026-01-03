@@ -97,16 +97,26 @@ Este projeto **NÃO** manipula:
 
 ### Dependências com Vulnerabilidades Aceitas
 
-| Pacote                    | Severidade | Justificativa                                          |
-| ------------------------- | ---------- | ------------------------------------------------------ |
-| `esbuild` (via Storybook) | Moderada   | Apenas ambiente de desenvolvimento, não afeta produção |
+Todas as vulnerabilidades abaixo estão em **dependências de desenvolvimento** e **NÃO afetam builds de produção**:
 
-Estas vulnerabilidades são monitoradas e serão corrigidas quando updates estiverem disponíveis.
+| Pacote                         | Severidade | Justificativa                                                    |
+| ------------------------------ | ---------- | ---------------------------------------------------------------- |
+| `esbuild` (via Storybook)      | Moderada   | Apenas dev server local, não exposto em produção                 |
+| `ip` (via Storybook)           | Alta       | Usado apenas no dev server do Storybook, não afeta produção      |
+| `glob` (via eslint-config-next)| Alta       | CLI do glob não é executada em produção                          |
+| `markdown-to-jsx` (via Storybook) | Moderada | Apenas documentação do Storybook, não afeta componentes         |
+
+**Motivo**: Storybook 8.1.2 é a última versão compatível com Next.js 14. Versões 8.6.x têm incompatibilidade com Webpack do Next.js 14.
+
+Estas vulnerabilidades são monitoradas e serão corrigidas quando:
+- Storybook lançar versão compatível com Next.js 14
+- O projeto migrar para Next.js 15
 
 ## Histórico de Segurança
 
 | Data       | Descrição                                      | Status       |
 | ---------- | ---------------------------------------------- | ------------ |
+| 2026-01-03 | Reduzido de 28 para 21 vulnerabilidades via overrides | ✅ Mitigado |
 | 2026-01-03 | Audit inicial, correção de 44 vulnerabilidades | ✅ Resolvido |
 
 ## Recursos Adicionais
