@@ -1,18 +1,21 @@
 import { Meta, Primary, Canvas, Controls } from '@storybook/blocks'
 
-import * as Story from './Link.stories.ts'
+import * as Story from './Link.stories.tsx'
 
 <Meta of={Story} />
 
-#  Âncora
+# Âncora
 
 Este é um componente de link, utilizado para navegação entre páginas ou seções.
 
-### Primário
-<Canvas of={Story.Primary} />
+### Padrão
+<Canvas of={Story.Default} />
+
+### Botão
+<Canvas of={Story.Button} />
 
 ### Tema Violeta
-<Canvas of={Story.Violet} />
+<Canvas of={Story.VioletDefault} />
 
 ### Desabilitado
 <Canvas of={Story.Disabled} />

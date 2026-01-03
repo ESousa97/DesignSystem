@@ -21,14 +21,14 @@ module.exports = {
       tv: 'var(--screen-tv)',
     },
     spacing: {
-      'none': 'var(--spacing-none) /* 0px */',
+      none: 'var(--spacing-none) /* 0px */',
       '4xs': 'var(--spacing-4xs) /* 8px */',
       '2xs': 'var(--spacing-2xs) /* 12px */',
-      'xs': 'var(--spacing-xs) /* 16px */',
-      'sm': 'var(--spacing-sm) /* 20px */',
-      'md': 'var(--spacing-md) /* 24px */',
-      'lg': 'var(--spacing-lg) /* 32px */',
-      'xl': 'var(--spacing-xl) /* 40px */',
+      xs: 'var(--spacing-xs) /* 16px */',
+      sm: 'var(--spacing-sm) /* 20px */',
+      md: 'var(--spacing-md) /* 24px */',
+      lg: 'var(--spacing-lg) /* 32px */',
+      xl: 'var(--spacing-xl) /* 40px */',
       '2xl': 'var(--spacing-2xl) /* 48px */',
       '4xl': 'var(--spacing-4xl) /* 56px */',
       0: 'var(--spacing-none) /* 0px */',
@@ -48,7 +48,7 @@ module.exports = {
       md: 'var(--text-md)',
       lg: 'var(--text-lg)',
       xl: 'var(--text-xl)',
-    },    
+    },
     extend: {
       colors: {
         primary: 'rgba(var(--primary), <alpha-value>)',
@@ -68,12 +68,12 @@ module.exports = {
         disabled: 'rgba(var(--bg-disabled), <alpha-value>)',
       },
 
-      textColor:{
-        gray:{
-        primary: 'rgba(var(--text-primary), <alpha-value>)',
-        secondary: 'rgba(var(--text-secondary), <alpha-value>)',
-        tertiary: 'rgba(var(--text-tertiary), <alpha-value>)',
-      },
+      textColor: {
+        gray: {
+          primary: 'rgba(var(--text-primary), <alpha-value>)',
+          secondary: 'rgba(var(--text-secondary), <alpha-value>)',
+          tertiary: 'rgba(var(--text-tertiary), <alpha-value>)',
+        },
       },
 
       boxShadow: {
@@ -84,7 +84,7 @@ module.exports = {
         outline: 'var(--shadow-outline)',
         'button-focus': 'var(--shadow-button-focus)',
       },
-      blur:{
+      blur: {
         default: 'var(--blur)',
       },
       borderRadius: {
@@ -94,7 +94,6 @@ module.exports = {
         lg: 'var(--border-radius-lg)',
       },
     },
-        
   },
   plugins: [],
 }

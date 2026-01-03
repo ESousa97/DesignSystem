@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+.next/
+out/
+build/
+dist/
+storybook-static/
+
+# Package manager
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Generated files
+*.min.js
+*.min.css
+next-env.d.ts
+
+# Binary files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.woff
+*.woff2
+*.ttf
+*.eot
+*.otf
+*.mp4
+*.webm
+
+# Documentation (local only)
+BASELINE.md
+FINAL.md
