@@ -78,7 +78,6 @@
     "not op_mini all"
   ],
   "overrides": {
-    "ip": "2.0.1",
     "markdown-to-jsx": "7.7.4"
   }
 }

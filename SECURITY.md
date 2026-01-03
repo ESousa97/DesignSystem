@@ -99,12 +99,13 @@ Este projeto **NÃO** manipula:
 
 Todas as vulnerabilidades abaixo estão em **dependências de desenvolvimento** e **NÃO afetam builds de produção**:
 
-| Pacote                         | Severidade | Justificativa                                                    |
-| ------------------------------ | ---------- | ---------------------------------------------------------------- |
-| `esbuild` (via Storybook)      | Moderada   | Apenas dev server local, não exposto em produção                 |
-| `ip` (via Storybook)           | Alta       | Usado apenas no dev server do Storybook, não afeta produção      |
-| `glob` (via eslint-config-next)| Alta       | CLI do glob não é executada em produção                          |
-| `markdown-to-jsx` (via Storybook) | Moderada | Apenas documentação do Storybook, não afeta componentes         |
+| Pacote                         | Severidade | Status | Justificativa                                                    |
+| ------------------------------ | ---------- | ------ | ---------------------------------------------------------------- |
+| `ip` (via Storybook)           | Alta       | ⚠️ Sem fix | Última versão (2.0.1) ainda vulnerável, usado apenas dev server  |
+| `esbuild` (via Storybook)      | Moderada   | ⚠️ Sem fix | Apenas dev server local, não exposto em produção                 |
+| `glob` (via eslint-config-next)| Alta       | ⚠️ Sem fix | CLI do glob não é executada em produção                          |
+
+**Nota sobre `ip@2.0.1`**: O pacote `ip` não possui versão corrigida (última: 2.0.1, vulnerável). O CVE-2024-29415 afeta apenas o dev server do Storybook que roda localmente. **Não há impacto em produção.**
 
 **Motivo**: Storybook 8.1.2 é a última versão compatível com Next.js 14. Versões 8.6.x têm incompatibilidade com Webpack do Next.js 14.
 
