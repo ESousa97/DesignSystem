@@ -8,52 +8,52 @@ const meta: Meta<LinkProps> = {
     layout: 'centered',
     docs: {
       description: {
-        component: 'Componente de link moderno com animações, múltiplas variações e suporte a ícones.'
-      }
-    }
+        component:
+          'Componente de link moderno com animações, múltiplas variações e suporte a ícones.',
+      },
+    },
   },
   argTypes: {
     children: {
       control: 'text',
-      description: 'Conteúdo do link'
+      description: 'Conteúdo do link',
     },
     href: {
       control: 'text',
-      description: 'URL de destino'
+      description: 'URL de destino',
     },
     variant: {
       control: 'select',
       options: ['default', 'button', 'subtle', 'underline'],
-      description: 'Variação visual do link'
+      description: 'Variação visual do link',
     },
     size: {
       control: 'select',
       options: ['sm', 'md', 'lg'],
-      description: 'Tamanho do texto'
+      description: 'Tamanho do texto',
     },
     disabled: {
       control: 'boolean',
-      description: 'Estado desabilitado'
+      description: 'Estado desabilitado',
     },
     external: {
       control: 'boolean',
-      description: 'Link externo (abre em nova aba)'
+      description: 'Link externo (abre em nova aba)',
     },
     loading: {
       control: 'boolean',
-      description: 'Estado de carregamento'
+      description: 'Estado de carregamento',
     },
     iconPosition: {
       control: 'select',
       options: ['left', 'right'],
-      description: 'Posição do ícone'
+      description: 'Posição do ícone',
     },
     className: {
       control: 'text',
-      description: 'Classes CSS adicionais'
-    }
+      description: 'Classes CSS adicionais',
+    },
   },
-  tags: ['autodocs']
 }
 
 export default meta
@@ -62,32 +62,32 @@ export default meta
 export const Default: StoryObj<LinkProps> = {
   args: {
     children: 'Link padrão',
-    href: '#'
-  }
+    href: '#',
+  },
 }
 
 export const Button: StoryObj<LinkProps> = {
   args: {
     children: 'Link como botão',
     href: '#',
-    variant: 'button'
-  }
+    variant: 'button',
+  },
 }
 
 export const Subtle: StoryObj<LinkProps> = {
   args: {
     children: 'Link sutil',
     href: '#',
-    variant: 'subtle'
-  }
+    variant: 'subtle',
+  },
 }
 
 export const Underline: StoryObj<LinkProps> = {
   args: {
     children: 'Link sublinhado',
     href: '#',
-    variant: 'underline'
-  }
+    variant: 'underline',
+  },
 }
 
 // Estados
@@ -95,16 +95,16 @@ export const Disabled: StoryObj<LinkProps> = {
   args: {
     children: 'Link desabilitado',
     href: '#',
-    disabled: true
-  }
+    disabled: true,
+  },
 }
 
 export const Loading: StoryObj<LinkProps> = {
   args: {
     children: 'Carregando',
     href: '#',
-    loading: true
-  }
+    loading: true,
+  },
 }
 
 // Tamanhos
@@ -112,24 +112,24 @@ export const Small: StoryObj<LinkProps> = {
   args: {
     children: 'Link pequeno',
     href: '#',
-    size: 'sm'
-  }
+    size: 'sm',
+  },
 }
 
 export const Medium: StoryObj<LinkProps> = {
   args: {
     children: 'Link médio',
     href: '#',
-    size: 'md'
-  }
+    size: 'md',
+  },
 }
 
 export const Large: StoryObj<LinkProps> = {
   args: {
     children: 'Link grande',
     href: '#',
-    size: 'lg'
-  }
+    size: 'lg',
+  },
 }
 
 // Com ícones
@@ -138,8 +138,8 @@ export const WithLeftIcon: StoryObj<LinkProps> = {
     children: 'Download',
     href: '#',
     icon: '⬇️',
-    iconPosition: 'left'
-  }
+    iconPosition: 'left',
+  },
 }
 
 export const WithRightIcon: StoryObj<LinkProps> = {
@@ -147,8 +147,8 @@ export const WithRightIcon: StoryObj<LinkProps> = {
     children: 'Próxima página',
     href: '#',
     icon: '→',
-    iconPosition: 'right'
-  }
+    iconPosition: 'right',
+  },
 }
 
 export const ButtonWithIcon: StoryObj<LinkProps> = {
@@ -157,8 +157,8 @@ export const ButtonWithIcon: StoryObj<LinkProps> = {
     href: '#',
     variant: 'button',
     icon: '💾',
-    iconPosition: 'left'
-  }
+    iconPosition: 'left',
+  },
 }
 
 // Links externos
@@ -166,8 +166,8 @@ export const External: StoryObj<LinkProps> = {
   args: {
     children: 'Site externo',
     href: 'https://example.com',
-    external: true
-  }
+    external: true,
+  },
 }
 
 export const ExternalButton: StoryObj<LinkProps> = {
@@ -175,8 +175,8 @@ export const ExternalButton: StoryObj<LinkProps> = {
     children: 'Abrir em nova aba',
     href: 'https://example.com',
     variant: 'button',
-    external: true
-  }
+    external: true,
+  },
 }
 
 // Tema violeta
@@ -184,8 +184,8 @@ export const VioletDefault: StoryObj<LinkProps> = {
   args: {
     children: 'Link violeta',
     href: '#',
-    className: 'theme-violet'
-  }
+    className: 'theme-violet',
+  },
 }
 
 export const VioletButton: StoryObj<LinkProps> = {
@@ -193,8 +193,8 @@ export const VioletButton: StoryObj<LinkProps> = {
     children: 'Botão violeta',
     href: '#',
     variant: 'button',
-    className: 'theme-violet'
-  }
+    className: 'theme-violet',
+  },
 }
 
 // Casos de uso específicos
@@ -202,8 +202,8 @@ export const NavigationLink: StoryObj<LinkProps> = {
   args: {
     children: 'Sobre nós',
     href: '/about',
-    variant: 'subtle'
-  }
+    variant: 'subtle',
+  },
 }
 
 export const CallToAction: StoryObj<LinkProps> = {
@@ -213,8 +213,8 @@ export const CallToAction: StoryObj<LinkProps> = {
     variant: 'button',
     size: 'lg',
     icon: '🚀',
-    iconPosition: 'right'
-  }
+    iconPosition: 'right',
+  },
 }
 
 export const DocumentLink: StoryObj<LinkProps> = {
@@ -222,73 +222,111 @@ export const DocumentLink: StoryObj<LinkProps> = {
     children: 'Manual do usuário',
     href: '/docs/manual.pdf',
     icon: '📄',
-    iconPosition: 'left'
-  }
+    iconPosition: 'left',
+  },
 }
 
 // Showcase
 export const AllVariants: StoryObj<LinkProps> = {
   render: () => (
     <div className="flex flex-col space-y-4">
-      <Link href="#" variant="default">Link padrão</Link>
-      <Link href="#" variant="button">Link como botão</Link>
-      <Link href="#" variant="subtle">Link sutil</Link>
-      <Link href="#" variant="underline">Link sublinhado</Link>
+      <Link href="#" variant="default">
+        Link padrão
+      </Link>
+      <Link href="#" variant="button">
+        Link como botão
+      </Link>
+      <Link href="#" variant="subtle">
+        Link sutil
+      </Link>
+      <Link href="#" variant="underline">
+        Link sublinhado
+      </Link>
     </div>
   ),
   parameters: {
     docs: {
       description: {
-        story: 'Todas as variações do link em um só lugar'
-      }
-    }
-  }
+        story: 'Todas as variações do link em um só lugar',
+      },
+    },
+  },
 }
 
 export const AllSizes: StoryObj<LinkProps> = {
   render: () => (
     <div className="flex flex-col space-y-4">
-      <Link href="#" size="sm">Link pequeno</Link>
-      <Link href="#" size="md">Link médio</Link>
-      <Link href="#" size="lg">Link grande</Link>
+      <Link href="#" size="sm">
+        Link pequeno
+      </Link>
+      <Link href="#" size="md">
+        Link médio
+      </Link>
+      <Link href="#" size="lg">
+        Link grande
+      </Link>
     </div>
   ),
   parameters: {
     docs: {
       description: {
-        story: 'Todos os tamanhos disponíveis'
-      }
-    }
-  }
+        story: 'Todos os tamanhos disponíveis',
+      },
+    },
+  },
 }
 
 export const UsageExamples: StoryObj<LinkProps> = {
   render: () => (
-    <div className="space-y-6 max-w-md">
+    <div className="max-w-md space-y-6">
       <div className="space-y-2">
         <h3 className="font-semibold text-gray-primary">Navegação</h3>
         <div className="flex space-x-4">
-          <Link href="#" variant="subtle">Home</Link>
-          <Link href="#" variant="subtle">Produtos</Link>
-          <Link href="#" variant="subtle">Sobre</Link>
-          <Link href="#" variant="subtle">Contato</Link>
+          <Link href="#" variant="subtle">
+            Home
+          </Link>
+          <Link href="#" variant="subtle">
+            Produtos
+          </Link>
+          <Link href="#" variant="subtle">
+            Sobre
+          </Link>
+          <Link href="#" variant="subtle">
+            Contato
+          </Link>
         </div>
       </div>
-      
+
       <div className="space-y-2">
         <h3 className="font-semibold text-gray-primary">Ações</h3>
         <div className="flex space-x-4">
-          <Link href="#" variant="button">Comprar agora</Link>
-          <Link href="#" variant="default">Saiba mais</Link>
+          <Link href="#" variant="button">
+            Comprar agora
+          </Link>
+          <Link href="#" variant="default">
+            Saiba mais
+          </Link>
         </div>
       </div>
-      
+
       <div className="space-y-2">
         <h3 className="font-semibold text-gray-primary">Documentos</h3>
         <div className="space-y-1">
-          <div><Link href="#" icon="📄" iconPosition="left">Termos de uso</Link></div>
-          <div><Link href="#" icon="🔒" iconPosition="left">Política de privacidade</Link></div>
-          <div><Link href="#" icon="❓" iconPosition="left">FAQ</Link></div>
+          <div>
+            <Link href="#" icon="📄" iconPosition="left">
+              Termos de uso
+            </Link>
+          </div>
+          <div>
+            <Link href="#" icon="🔒" iconPosition="left">
+              Política de privacidade
+            </Link>
+          </div>
+          <div>
+            <Link href="#" icon="❓" iconPosition="left">
+              FAQ
+            </Link>
+          </div>
         </div>
       </div>
     </div>
@@ -296,8 +334,8 @@ export const UsageExamples: StoryObj<LinkProps> = {
   parameters: {
     docs: {
       description: {
-        story: 'Exemplos práticos de uso do componente Link'
-      }
-    }
-  }
+        story: 'Exemplos práticos de uso do componente Link',
+      },
+    },
+  },
 }

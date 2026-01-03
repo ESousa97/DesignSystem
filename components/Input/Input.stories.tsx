@@ -1,4 +1,4 @@
-import { Meta, StoryObj} from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 import Input, { InputProps } from './Input'
 
 const meta: Meta<InputProps> = {
@@ -8,55 +8,55 @@ const meta: Meta<InputProps> = {
     layout: 'centered',
     docs: {
       description: {
-        component: 'Componente de entrada de texto moderno com múltiplas variações, estados e animações.'
-      }
-    }
+        component:
+          'Componente de entrada de texto moderno com múltiplas variações, estados e animações.',
+      },
+    },
   },
   argTypes: {
     label: {
       control: 'text',
-      description: 'Rótulo do campo'
+      description: 'Rótulo do campo',
     },
     placeholder: {
       control: 'text',
-      description: 'Texto de placeholder'
+      description: 'Texto de placeholder',
     },
     multiline: {
       control: 'boolean',
-      description: 'Renderizar como textarea'
+      description: 'Renderizar como textarea',
     },
     error: {
       control: 'text',
-      description: 'Mensagem de erro'
+      description: 'Mensagem de erro',
     },
     success: {
       control: 'boolean',
-      description: 'Estado de sucesso'
+      description: 'Estado de sucesso',
     },
     helperText: {
       control: 'text',
-      description: 'Texto de ajuda'
+      description: 'Texto de ajuda',
     },
     size: {
       control: 'select',
       options: ['sm', 'md', 'lg'],
-      description: 'Tamanho do input'
+      description: 'Tamanho do input',
     },
     variant: {
       control: 'select',
       options: ['default', 'filled', 'outlined'],
-      description: 'Variação visual'
+      description: 'Variação visual',
     },
     disabled: {
       control: 'boolean',
-      description: 'Estado desabilitado'
+      description: 'Estado desabilitado',
     },
     loading: {
       control: 'boolean',
-      description: 'Estado de carregamento'
-    }
+      description: 'Estado de carregamento',
+    },
   },
-  tags: ['autodocs']
 }
 
 export default meta
@@ -65,38 +65,38 @@ export default meta
 export const Default: StoryObj<InputProps> = {
   args: {
     placeholder: 'Digite aqui...',
-    variant: 'default'
-  }
+    variant: 'default',
+  },
 }
 
 export const Filled: StoryObj<InputProps> = {
   args: {
     placeholder: 'Input preenchido',
-    variant: 'filled'
-  }
+    variant: 'filled',
+  },
 }
 
 export const Outlined: StoryObj<InputProps> = {
   args: {
     placeholder: 'Input com borda',
-    variant: 'outlined'
-  }
+    variant: 'outlined',
+  },
 }
 
 // Com labels
 export const WithLabel: StoryObj<InputProps> = {
   args: {
     label: 'Nome completo',
-    placeholder: 'Digite seu nome'
-  }
+    placeholder: 'Digite seu nome',
+  },
 }
 
 export const WithLabelRequired: StoryObj<InputProps> = {
   args: {
     label: 'Email *',
     placeholder: 'seu@email.com',
-    type: 'email'
-  }
+    type: 'email',
+  },
 }
 
 // Estados de validação
@@ -105,8 +105,8 @@ export const WithError: StoryObj<InputProps> = {
     label: 'Email',
     placeholder: 'seu@email.com',
     error: 'Por favor, insira um email válido',
-    value: 'email-invalido'
-  }
+    value: 'email-invalido',
+  },
 }
 
 export const WithSuccess: StoryObj<InputProps> = {
@@ -115,8 +115,8 @@ export const WithSuccess: StoryObj<InputProps> = {
     placeholder: 'seu@email.com',
     success: true,
     helperText: 'Email válido!',
-    value: 'usuario@exemplo.com'
-  }
+    value: 'usuario@exemplo.com',
+  },
 }
 
 export const WithHelperText: StoryObj<InputProps> = {
@@ -124,45 +124,45 @@ export const WithHelperText: StoryObj<InputProps> = {
     label: 'Senha',
     placeholder: 'Digite sua senha',
     type: 'password',
-    helperText: 'Deve conter pelo menos 8 caracteres'
-  }
+    helperText: 'Deve conter pelo menos 8 caracteres',
+  },
 }
 
 // Tamanhos
 export const Small: StoryObj<InputProps> = {
   args: {
     placeholder: 'Input pequeno',
-    size: 'sm'
-  }
+    size: 'sm',
+  },
 }
 
 export const Medium: StoryObj<InputProps> = {
   args: {
     placeholder: 'Input médio',
-    size: 'md'
-  }
+    size: 'md',
+  },
 }
 
 export const Large: StoryObj<InputProps> = {
   args: {
     placeholder: 'Input grande',
-    size: 'lg'
-  }
+    size: 'lg',
+  },
 }
 
 // Com ícones
 export const WithLeftIcon: StoryObj<InputProps> = {
   args: {
     placeholder: 'Buscar...',
-    leftIcon: '🔍'
-  }
+    leftIcon: '🔍',
+  },
 }
 
 export const WithRightIcon: StoryObj<InputProps> = {
   args: {
     placeholder: 'Configurações',
-    rightIcon: '⚙️'
-  }
+    rightIcon: '⚙️',
+  },
 }
 
 export const WithBothIcons: StoryObj<InputProps> = {
@@ -170,8 +170,8 @@ export const WithBothIcons: StoryObj<InputProps> = {
     placeholder: 'Email com ícones',
     leftIcon: '📧',
     rightIcon: '✓',
-    success: true
-  }
+    success: true,
+  },
 }
 
 // Estados especiais
@@ -179,16 +179,16 @@ export const Loading: StoryObj<InputProps> = {
   args: {
     placeholder: 'Carregando...',
     loading: true,
-    value: 'Verificando dados'
-  }
+    value: 'Verificando dados',
+  },
 }
 
 export const Disabled: StoryObj<InputProps> = {
   args: {
     placeholder: 'Campo desabilitado',
     disabled: true,
-    value: 'Não editável'
-  }
+    value: 'Não editável',
+  },
 }
 
 export const DisabledWithLabel: StoryObj<InputProps> = {
@@ -197,8 +197,8 @@ export const DisabledWithLabel: StoryObj<InputProps> = {
     placeholder: 'Não editável',
     disabled: true,
     value: 'Valor fixo',
-    helperText: 'Este campo não pode ser editado'
-  }
+    helperText: 'Este campo não pode ser editado',
+  },
 }
 
 // Multiline (Textarea)
@@ -206,8 +206,8 @@ export const Multiline: StoryObj<InputProps> = {
   args: {
     multiline: true,
     placeholder: 'Digite sua mensagem...',
-    label: 'Mensagem'
-  }
+    label: 'Mensagem',
+  },
 }
 
 export const MultilineWithError: StoryObj<InputProps> = {
@@ -216,8 +216,8 @@ export const MultilineWithError: StoryObj<InputProps> = {
     label: 'Comentário',
     placeholder: 'Deixe seu comentário...',
     error: 'Comentário muito curto',
-    value: 'Muito curto'
-  }
+    value: 'Muito curto',
+  },
 }
 
 // Tipos específicos
@@ -226,8 +226,8 @@ export const Email: StoryObj<InputProps> = {
     type: 'email',
     label: 'Email',
     placeholder: 'seu@email.com',
-    leftIcon: '📧'
-  }
+    leftIcon: '📧',
+  },
 }
 
 export const Password: StoryObj<InputProps> = {
@@ -236,8 +236,8 @@ export const Password: StoryObj<InputProps> = {
     label: 'Senha',
     placeholder: 'Digite sua senha',
     leftIcon: '🔒',
-    helperText: 'Mínimo 8 caracteres'
-  }
+    helperText: 'Mínimo 8 caracteres',
+  },
 }
 
 export const Number: StoryObj<InputProps> = {
@@ -246,14 +246,14 @@ export const Number: StoryObj<InputProps> = {
     label: 'Idade',
     placeholder: '0',
     min: '0',
-    max: '120'
-  }
+    max: '120',
+  },
 }
 
 // Showcase
 export const AllVariants: StoryObj<InputProps> = {
   render: () => (
-    <div className="space-y-4 w-80">
+    <div className="w-80 space-y-4">
       <Input placeholder="Default" variant="default" />
       <Input placeholder="Filled" variant="filled" />
       <Input placeholder="Outlined" variant="outlined" />
@@ -262,15 +262,15 @@ export const AllVariants: StoryObj<InputProps> = {
   parameters: {
     docs: {
       description: {
-        story: 'Todas as variações visuais do input'
-      }
-    }
-  }
+        story: 'Todas as variações visuais do input',
+      },
+    },
+  },
 }
 
 export const AllSizes: StoryObj<InputProps> = {
   render: () => (
-    <div className="space-y-4 w-80">
+    <div className="w-80 space-y-4">
       <Input placeholder="Small" size="sm" />
       <Input placeholder="Medium" size="md" />
       <Input placeholder="Large" size="lg" />
@@ -279,35 +279,26 @@ export const AllSizes: StoryObj<InputProps> = {
   parameters: {
     docs: {
       description: {
-        story: 'Todos os tamanhos disponíveis do input'
-      }
-    }
-  }
+        story: 'Todos os tamanhos disponíveis do input',
+      },
+    },
+  },
 }
 
 export const FormExample: StoryObj<InputProps> = {
   render: () => (
-    <div className="space-y-6 w-96">
-      <Input 
-        label="Nome completo *" 
-        placeholder="Digite seu nome"
-        leftIcon="👤"
-      />
-      <Input 
-        label="Email *" 
-        type="email"
-        placeholder="seu@email.com"
-        leftIcon="📧"
-      />
-      <Input 
-        label="Telefone" 
+    <div className="w-96 space-y-6">
+      <Input label="Nome completo *" placeholder="Digite seu nome" leftIcon="👤" />
+      <Input label="Email *" type="email" placeholder="seu@email.com" leftIcon="📧" />
+      <Input
+        label="Telefone"
         type="tel"
         placeholder="(11) 99999-9999"
         leftIcon="📱"
         helperText="Formato: (xx) xxxxx-xxxx"
       />
-      <Input 
-        label="Mensagem" 
+      <Input
+        label="Mensagem"
         multiline
         placeholder="Deixe sua mensagem..."
         helperText="Mínimo 10 caracteres"
@@ -317,8 +308,8 @@ export const FormExample: StoryObj<InputProps> = {
   parameters: {
     docs: {
       description: {
-        story: 'Exemplo de formulário completo com inputs variados'
-      }
-    }
-  }
+        story: 'Exemplo de formulário completo com inputs variados',
+      },
+    },
+  },
 }
