@@ -58,7 +58,7 @@
     "concurrently": "^9.2.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.35",
-    "eslint-plugin-storybook": "^10.1.11",
+    "eslint-plugin-storybook": "^0.8.0",
     "http-server": "^14.1.1",
     "postcss": "^8",
     "prettier": "^3.2.0",
@@ -76,5 +76,8 @@
     ">0.3%",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "overrides": {
+    "markdown-to-jsx": "7.7.4"
+  }
 }
