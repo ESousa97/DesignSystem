@@ -64,7 +64,7 @@
     "prettier": "^3.2.0",
     "prettier-plugin-tailwindcss": "^0.5.0",
     "storybook": "8.1.2",
-    "tailwindcss": "^4.1.18",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "wait-on": "^9.0.3"
   },
@@ -76,5 +76,8 @@
     ">0.3%",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "overrides": {
+    "markdown-to-jsx": "7.7.4"
+  }
 }
