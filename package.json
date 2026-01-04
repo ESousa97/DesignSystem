@@ -76,5 +76,8 @@
     ">0.3%",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "overrides": {
+    "markdown-to-jsx": "7.7.4"
+  }
 }
