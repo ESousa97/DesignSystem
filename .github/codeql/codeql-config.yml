@@ -1,0 +1,6 @@
+# CodeQL analysis configuration
+# We intentionally ignore generated/minified build artifacts committed for Storybook preview.
+# These bundles are not hand-written source and commonly trigger false positives.
+
+paths-ignore:
+  - storybook-static/**
