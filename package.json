@@ -79,6 +79,8 @@
   ],
   "overrides": {
     "markdown-to-jsx": "7.7.4",
-    "glob": "10.5.0"
+    "@next/eslint-plugin-next": {
+      "glob": "10.5.0"
+    }
   }
 }
