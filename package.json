@@ -36,9 +36,9 @@
     "precommit": "npm run lint && npm run format:check && npm run typecheck"
   },
   "dependencies": {
-    "next": "15.5.9",
-    "react": "^19",
-    "react-dom": "^19",
+    "next": "14.2.35",
+    "react": "^18",
+    "react-dom": "^18",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
@@ -53,11 +53,11 @@
     "@storybook/test": "8.1.2",
     "@storybook/test-runner": "^0.17.0",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "concurrently": "^9.2.1",
     "eslint": "^8",
-    "eslint-config-next": "15.5.9",
+    "eslint-config-next": "14.2.35",
     "eslint-plugin-storybook": "^0.8.0",
     "http-server": "^14.1.1",
     "postcss": "^8",
