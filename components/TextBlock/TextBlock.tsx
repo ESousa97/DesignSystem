@@ -78,8 +78,8 @@ const TextBlock = ({
       {/* Background Pattern (apenas para variant gradient) */}
       {variant === 'gradient' && (
         <div className="absolute inset-0 opacity-30">
-          <div className="w-32 h-32 -translate-y-16 translate-x-16 absolute right-0 top-0 rounded-full bg-primary/20" />
-          <div className="w-24 h-24 translate-y-12 -translate-x-12 absolute bottom-0 left-0 rounded-full bg-secondary/20" />
+          <div className="bg-primary/20 absolute top-0 right-0 h-32 w-32 translate-x-16 -translate-y-16 rounded-full" />
+          <div className="bg-secondary/20 absolute bottom-0 left-0 h-24 w-24 -translate-x-12 translate-y-12 rounded-full" />
         </div>
       )}
 
@@ -88,20 +88,20 @@ const TextBlock = ({
         {/* Header com ícone e título */}
         <div className="mb-3 flex items-start gap-3">
           {icon && (
-            <div className="flex-shrink-0 rounded-lg bg-primary/10 p-2 text-primary transition-colors duration-200 group-hover:bg-primary/20">
+            <div className="bg-primary/10 text-primary group-hover:bg-primary/20 flex-shrink-0 rounded-lg p-2 transition-colors duration-200">
               {icon}
             </div>
           )}
 
           <h3
-            className={`text-gray-primary transition-colors duration-200 group-hover:text-primary ${sizeStyles.title} `}
+            className={`text-gray-primary group-hover:text-primary transition-colors duration-200 ${sizeStyles.title} `}
           >
             {title}
           </h3>
         </div>
 
         {/* Texto principal */}
-        <p className={`mb-4 leading-relaxed text-gray-secondary ${sizeStyles.text} `}>
+        <p className={`text-gray-secondary mb-4 leading-relaxed ${sizeStyles.text} `}>
           {textBlock}
         </p>
 
@@ -109,10 +109,10 @@ const TextBlock = ({
         {actionButton && (
           <button
             onClick={actionButton.onClick}
-            className={`rounded-lg px-4 py-2 font-medium transition-all duration-200 focus:outline-none focus:ring-4 ${
+            className={`rounded-lg px-4 py-2 font-medium transition-all duration-200 focus:ring-4 focus:outline-none ${
               actionButton.variant === 'secondary'
                 ? 'bg-quaternary text-primary hover:bg-tertiary focus:ring-primary/20'
-                : 'bg-primary text-white hover:bg-hover hover:shadow-lg hover:shadow-primary/25 focus:ring-primary/30'
+                : 'bg-primary hover:bg-hover hover:shadow-primary/25 focus:ring-primary/30 text-white hover:shadow-lg'
             } `}
           >
             {actionButton.text}
@@ -122,13 +122,13 @@ const TextBlock = ({
 
       {/* Hover Effect Line */}
       <div
-        className={`absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full ${variant === 'outlined' ? 'hidden' : ''} `}
+        className={`from-primary to-secondary absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r transition-all duration-300 group-hover:w-full ${variant === 'outlined' ? 'hidden' : ''} `}
       />
 
       {/* Shine Effect */}
       {variant === 'elevated' && (
         <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-          <div className="absolute -left-full -top-full h-full w-full rotate-45 bg-gradient-to-br from-white/20 to-transparent transition-all duration-700 group-hover:left-full group-hover:top-full" />
+          <div className="absolute -top-full -left-full h-full w-full rotate-45 bg-gradient-to-br from-white/20 to-transparent transition-all duration-700 group-hover:top-full group-hover:left-full" />
         </div>
       )}
     </div>

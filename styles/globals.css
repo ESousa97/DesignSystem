@@ -142,17 +142,17 @@
 
   /* Focus styles */
   .focus-ring {
-    @apply focus:outline-none focus:ring-4 focus:ring-primary/30;
+    @apply focus:ring-primary/30 focus:ring-4 focus:outline-none;
   }
 
   /* Button base styles */
   .btn-base {
-    @apply font-medium transition-all duration-200 ease-in-out focus:outline-none focus:ring-4;
+    @apply font-medium transition-all duration-200 ease-in-out focus:ring-4 focus:outline-none;
   }
 
   /* Card base styles */
   .card-base {
-    @apply rounded-lg border border-outline/20 bg-white transition-all duration-200;
+    @apply border-outline/20 rounded-lg border bg-white transition-all duration-200;
   }
 
   /* Input base styles */
@@ -262,7 +262,7 @@
   }
 
   .hover-glow {
-    @apply transition-all duration-200 ease-out hover:shadow-lg hover:shadow-primary/25;
+    @apply hover:shadow-primary/25 transition-all duration-200 ease-out hover:shadow-lg;
   }
 
   /* Glass morphism effect */
@@ -276,7 +276,7 @@
 
   /* Text gradients */
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    @apply from-primary to-secondary bg-gradient-to-r bg-clip-text text-transparent;
   }
 
   .text-gradient-violet {
@@ -290,19 +290,19 @@
 
   /* Responsive text sizes */
   .text-responsive-sm {
-    @apply md:text-md lg:text-lg text-sm;
+    @apply md:text-md text-sm lg:text-lg;
   }
 
   .text-responsive-md {
-    @apply md:text-lg lg:text-xl text-md;
+    @apply text-md md:text-lg lg:text-xl;
   }
 
   .text-responsive-lg {
-    @apply md:text-xl lg:text-2xl text-lg;
+    @apply text-lg md:text-xl lg:text-2xl;
   }
 
   .text-responsive-xl {
-    @apply md:text-2xl lg:text-3xl text-xl;
+    @apply text-xl md:text-2xl lg:text-3xl;
   }
 
   /* Custom scrollbar */
@@ -330,7 +330,7 @@
 
   /* Focus visible for accessibility */
   .focus-visible-ring {
-    @apply focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/30;
+    @apply focus-visible:ring-primary/30 focus-visible:ring-4 focus-visible:outline-none;
   }
 }
 
