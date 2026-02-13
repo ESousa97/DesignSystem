@@ -118,6 +118,161 @@ const LoadingSpinner = () => (
   </svg>
 )
 
+function getLabelTextClass(hasError: boolean, success: boolean) {
+  if (hasError) return 'text-red-600'
+  if (success) return 'text-green-600'
+  return 'text-gray-primary'
+}
+
+function getHelperTextClass(hasError: boolean, success: boolean) {
+  if (hasError) return 'text-red-600'
+  if (success) return 'text-green-600'
+  return 'text-gray-secondary'
+}
+
+function getAriaDescribedBy(hasError: boolean, helperText?: string) {
+  if (hasError) return 'error-message'
+  if (helperText) return 'helper-text'
+  return undefined
+}
+
+function getInputClassName({
+  size,
+  variant,
+  error,
+  success,
+  disabled,
+  hasLeftIcon,
+  hasRightIcon,
+  multiline,
+  className,
+}: {
+  size: InputProps['size']
+  variant: InputProps['variant']
+  error?: string
+  success: boolean
+  disabled?: boolean
+  hasLeftIcon: boolean
+  hasRightIcon: boolean
+  multiline: boolean
+  className?: string
+}) {
+  return [
+    'w-full rounded-lg font-medium placeholder:text-gray-tertiary',
+    getSizeStyles(size),
+    getVariantStyles(variant, error, success, disabled),
+    hasLeftIcon ? 'pl-10' : '',
+    hasRightIcon ? 'pr-10' : '',
+    multiline ? 'min-h-[120px] resize-y' : '',
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ')
+}
+
+type InputLabelProps = {
+  label?: string
+  hasError: boolean
+  success: boolean
+}
+
+const InputLabel = ({ label, hasError, success }: InputLabelProps) => {
+  if (!label) return null
+
+  return (
+    <label
+      className={`mb-2 block text-sm font-medium transition-colors duration-200 ${getLabelTextClass(
+        hasError,
+        success
+      )}`}
+    >
+      {label}
+    </label>
+  )
+}
+
+type InputAdornmentProps = {
+  hasLeftIcon?: boolean
+  hasRightIcon?: boolean
+  leftIcon?: React.ReactNode
+  rightIcon?: React.ReactNode
+  loading?: boolean
+}
+
+const LeftAdornment = ({ hasLeftIcon = false, leftIcon }: InputAdornmentProps) => {
+  if (!hasLeftIcon) return null
+
+  return (
+    <div className="absolute left-3 top-1/2 z-10 -translate-y-1/2 transform text-icon">
+      {leftIcon}
+    </div>
+  )
+}
+
+const RightAdornment = ({
+  hasRightIcon = false,
+  rightIcon,
+  loading = false,
+}: InputAdornmentProps) => {
+  if (!hasRightIcon) return null
+
+  return (
+    <div className="absolute right-3 top-1/2 z-10 -translate-y-1/2 transform text-icon">
+      {loading ? <LoadingSpinner /> : rightIcon}
+    </div>
+  )
+}
+
+type InputHelperProps = {
+  error?: string
+  success: boolean
+  helperText?: string
+  hasError: boolean
+}
+
+const InputHelper = ({ error, success, helperText, hasError }: InputHelperProps) => {
+  if (!hasError && !helperText) return null
+
+  return (
+    <div className="mt-2 flex items-start gap-1">
+      {hasError && (
+        <svg
+          className="mt-0.5 h-4 w-4 flex-shrink-0 text-red-500"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fillRule="evenodd"
+            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+            clipRule="evenodd"
+          />
+        </svg>
+      )}
+
+      {success && !hasError && (
+        <svg
+          className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-500"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clipRule="evenodd"
+          />
+        </svg>
+      )}
+
+      <p
+        id={hasError ? 'error-message' : 'helper-text'}
+        className={`text-sm transition-colors duration-200 ${getHelperTextClass(hasError, success)}`}
+      >
+        {hasError ? error : helperText}
+      </p>
+    </div>
+  )
+}
+
 const Input = ({
   label,
   multiline = false,
@@ -133,59 +288,39 @@ const Input = ({
   disabled,
   ...rest
 }: InputProps) => {
-  const hasLabel = !!label
   const hasError = !!error
   const hasLeftIcon = !!leftIcon
   const hasRightIcon = !!rightIcon || loading
+  const describedBy = getAriaDescribedBy(hasError, helperText)
+  const inputClassName = getInputClassName({
+    size,
+    variant,
+    error,
+    success,
+    disabled,
+    hasLeftIcon,
+    hasRightIcon,
+    multiline,
+    className,
+  })
 
   return (
     <div className="w-full">
-      {/* Label */}
-      {hasLabel && (
-        <label
-          className={`
-          mb-2 block text-sm font-medium transition-colors duration-200
-          ${hasError ? 'text-red-600' : success ? 'text-green-600' : 'text-gray-primary'}
-        `}
-        >
-          {label}
-        </label>
-      )}
+      <InputLabel label={label} hasError={hasError} success={success} />
 
-      {/* Input Container */}
       <div className="relative">
-        {/* Left Icon */}
-        {hasLeftIcon && (
-          <div className="absolute left-3 top-1/2 z-10 -translate-y-1/2 transform text-icon">
-            {leftIcon}
-          </div>
-        )}
+        <LeftAdornment hasLeftIcon={hasLeftIcon} leftIcon={leftIcon} />
 
-        {/* Input Field */}
         <InputOrTextArea
-          className={`
-            w-full rounded-lg font-medium placeholder:text-gray-tertiary
-            ${getSizeStyles(size)}
-            ${getVariantStyles(variant, error, success, disabled)}
-            ${hasLeftIcon ? 'pl-10' : ''}
-            ${hasRightIcon ? 'pr-10' : ''}
-            ${multiline ? 'min-h-[120px] resize-y' : ''}
-            ${className}
-          `}
+          className={inputClassName}
           disabled={disabled}
           aria-invalid={hasError}
-          aria-describedby={hasError ? 'error-message' : helperText ? 'helper-text' : undefined}
+          aria-describedby={describedBy}
           {...rest}
         />
 
-        {/* Right Icon / Loading */}
-        {hasRightIcon && (
-          <div className="absolute right-3 top-1/2 z-10 -translate-y-1/2 transform text-icon">
-            {loading ? <LoadingSpinner /> : rightIcon}
-          </div>
-        )}
+        <RightAdornment hasRightIcon={hasRightIcon} rightIcon={rightIcon} loading={loading} />
 
-        {/* Focus Ring Enhancement */}
         <div
           className={`
           pointer-events-none absolute inset-0 rounded-lg transition-all duration-200
@@ -198,48 +333,7 @@ const Input = ({
         />
       </div>
 
-      {/* Helper Text / Error Message */}
-      {(hasError || helperText) && (
-        <div className="mt-2 flex items-start gap-1">
-          {hasError && (
-            <svg
-              className="mt-0.5 h-4 w-4 flex-shrink-0 text-red-500"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
-                clipRule="evenodd"
-              />
-            </svg>
-          )}
-
-          {success && !hasError && (
-            <svg
-              className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-500"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                clipRule="evenodd"
-              />
-            </svg>
-          )}
-
-          <p
-            id={hasError ? 'error-message' : 'helper-text'}
-            className={`
-              text-sm transition-colors duration-200
-              ${hasError ? 'text-red-600' : success ? 'text-green-600' : 'text-gray-secondary'}
-            `}
-          >
-            {hasError ? error : helperText}
-          </p>
-        </div>
-      )}
+      <InputHelper error={error} success={success} helperText={helperText} hasError={hasError} />
     </div>
   )
 }

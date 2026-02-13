@@ -63,6 +63,45 @@ const App = () => {
     }, 2000)
   }
 
+  const renderValidationInputs = (containerClassName: string) => (
+    <div className={containerClassName}>
+      <Input
+        placeholder="Email válido"
+        leftIcon={<FiMail />}
+        success
+        helperText="Email verificado!"
+        value={validEmail}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValidEmail(e.target.value)}
+      />
+      <Input
+        placeholder="Email inválido"
+        leftIcon={<FiMail />}
+        error="Formato de email inválido"
+        value={invalidEmail}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInvalidEmail(e.target.value)}
+      />
+      <Input placeholder="Carregando..." loading value="Verificando dados" readOnly />
+    </div>
+  )
+
+  const renderSpecialTypeInputs = (containerClassName: string) => (
+    <div className={containerClassName}>
+      <Input
+        type="password"
+        placeholder="Senha segura"
+        leftIcon={<FiSettings />}
+        helperText="Mínimo 8 caracteres"
+      />
+      <Input type="number" placeholder="Idade" leftIcon={<FiCalendar />} min="0" max="120" />
+      <Input
+        multiline
+        placeholder="Sua mensagem..."
+        helperText="Máximo 500 caracteres"
+        onChange={(_e: React.ChangeEvent<HTMLTextAreaElement>) => {}}
+      />
+    </div>
+  )
+
   return (
     <div className="from-light min-h-screen bg-gradient-to-br via-quaternary/30 to-tertiary/20">
       {/* Decorative background elements */}
@@ -269,53 +308,12 @@ const App = () => {
                     Validação e Exemplos Especiais
                   </h3>
 
-                  <div className="md:grid-cols-3 grid grid-cols-1 gap-6">
-                    <Input
-                      placeholder="Email válido"
-                      leftIcon={<FiMail />}
-                      success
-                      helperText="Email verificado!"
-                      value={validEmail}
-                      onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        setValidEmail(e.target.value)
-                      }
-                    />
-                    <Input
-                      placeholder="Email inválido"
-                      leftIcon={<FiMail />}
-                      error="Formato de email inválido"
-                      value={invalidEmail}
-                      onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        setInvalidEmail(e.target.value)
-                      }
-                    />
-                    <Input placeholder="Carregando..." loading value="Verificando dados" readOnly />
-                  </div>
+                  {renderValidationInputs('md:grid-cols-3 grid grid-cols-1 gap-6')}
                 </div>
 
                 <div className="space-y-6">
                   <h3 className="text-xl font-semibold text-gray-primary">Tipos Especiais</h3>
-                  <div className="md:grid-cols-3 grid grid-cols-1 gap-6">
-                    <Input
-                      type="password"
-                      placeholder="Senha segura"
-                      leftIcon={<FiSettings />}
-                      helperText="Mínimo 8 caracteres"
-                    />
-                    <Input
-                      type="number"
-                      placeholder="Idade"
-                      leftIcon={<FiCalendar />}
-                      min="0"
-                      max="120"
-                    />
-                    <Input
-                      multiline
-                      placeholder="Sua mensagem..."
-                      helperText="Máximo 500 caracteres"
-                      onChange={(_e: React.ChangeEvent<HTMLTextAreaElement>) => {}}
-                    />
-                  </div>
+                  {renderSpecialTypeInputs('md:grid-cols-3 grid grid-cols-1 gap-6')}
                 </div>
               </div>
             </div>
@@ -421,53 +419,12 @@ const App = () => {
 
                 <div className="space-y-4">
                   <h4 className="font-semibold text-gray-primary">Com Validação</h4>
-                  <div className="space-y-4">
-                    <Input
-                      placeholder="Email válido"
-                      leftIcon={<FiMail />}
-                      success
-                      helperText="Email verificado!"
-                      value={validEmail}
-                      onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        setValidEmail(e.target.value)
-                      }
-                    />
-                    <Input
-                      placeholder="Email inválido"
-                      leftIcon={<FiMail />}
-                      error="Formato de email inválido"
-                      value={invalidEmail}
-                      onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                        setInvalidEmail(e.target.value)
-                      }
-                    />
-                    <Input placeholder="Carregando..." loading value="Verificando dados" readOnly />
-                  </div>
+                  {renderValidationInputs('space-y-4')}
                 </div>
 
                 <div className="space-y-4">
                   <h4 className="font-semibold text-gray-primary">Tipos Especiais</h4>
-                  <div className="space-y-4">
-                    <Input
-                      type="password"
-                      placeholder="Senha segura"
-                      leftIcon={<FiSettings />}
-                      helperText="Mínimo 8 caracteres"
-                    />
-                    <Input
-                      type="number"
-                      placeholder="Idade"
-                      leftIcon={<FiCalendar />}
-                      min="0"
-                      max="120"
-                    />
-                    <Input
-                      multiline
-                      placeholder="Sua mensagem..."
-                      helperText="Máximo 500 caracteres"
-                      onChange={(_e: React.ChangeEvent<HTMLTextAreaElement>) => {}}
-                    />
-                  </div>
+                  {renderSpecialTypeInputs('space-y-4')}
                 </div>
               </div>
             </div>
