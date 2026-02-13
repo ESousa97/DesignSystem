@@ -13,6 +13,7 @@ export default defineConfig([
       'no-var': 'error',
       'react/jsx-no-target-blank': 'error',
       'storybook/no-renderer-packages': 'off',
+      'storybook/no-uninstalled-addons': 'off',
     },
   },
   {
