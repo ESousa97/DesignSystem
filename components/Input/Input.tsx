@@ -322,14 +322,11 @@ const Input = ({
         <RightAdornment hasRightIcon={hasRightIcon} rightIcon={rightIcon} loading={loading} />
 
         <div
-          className={`
-          pointer-events-none absolute inset-0 rounded-lg transition-all duration-200
-          ${
+          className={`pointer-events-none absolute inset-0 rounded-lg transition-all duration-200 ${
             !disabled && !hasError && !success
               ? 'group-focus-within:ring-4 group-focus-within:ring-primary/20'
               : ''
-          }
-        `}
+          } `}
         />
       </div>
 

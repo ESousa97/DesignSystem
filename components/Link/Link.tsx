@@ -137,9 +137,7 @@ const Link = ({
   return (
     <a {...linkProps}>
       <span
-        className={`
-        ${variant === 'button' ? 'flex items-center gap-2' : 'inline-flex items-center gap-1'}
-      `}
+        className={` ${variant === 'button' ? 'flex items-center gap-2' : 'inline-flex items-center gap-1'} `}
       >
         {icon && iconPosition === 'left' && <span className="flex items-center">{icon}</span>}
 
