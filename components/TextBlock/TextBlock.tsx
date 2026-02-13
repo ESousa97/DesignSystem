@@ -73,14 +73,7 @@ const TextBlock = ({
 
   return (
     <div
-      className={`
-        group relative flex
-        flex-col items-start justify-center overflow-hidden rounded-xl
-        ${sizeStyles.container}
-        ${getVariantStyles(variant)}
-        ${animated ? 'animate-fadeIn' : ''}
-        ${className}
-      `}
+      className={`group relative flex flex-col items-start justify-center overflow-hidden rounded-xl ${sizeStyles.container} ${getVariantStyles(variant)} ${animated ? 'animate-fadeIn' : ''} ${className} `}
     >
       {/* Background Pattern (apenas para variant gradient) */}
       {variant === 'gradient' && (
@@ -101,22 +94,14 @@ const TextBlock = ({
           )}
 
           <h3
-            className={`
-            text-gray-primary transition-colors duration-200 group-hover:text-primary
-            ${sizeStyles.title}
-          `}
+            className={`text-gray-primary transition-colors duration-200 group-hover:text-primary ${sizeStyles.title} `}
           >
             {title}
           </h3>
         </div>
 
         {/* Texto principal */}
-        <p
-          className={`
-          mb-4 leading-relaxed text-gray-secondary
-          ${sizeStyles.text}
-        `}
-        >
+        <p className={`mb-4 leading-relaxed text-gray-secondary ${sizeStyles.text} `}>
           {textBlock}
         </p>
 
@@ -124,15 +109,11 @@ const TextBlock = ({
         {actionButton && (
           <button
             onClick={actionButton.onClick}
-            className={`
-              rounded-lg px-4 py-2 font-medium transition-all duration-200
-              focus:outline-none focus:ring-4
-              ${
-                actionButton.variant === 'secondary'
-                  ? 'bg-quaternary text-primary hover:bg-tertiary focus:ring-primary/20'
-                  : 'bg-primary text-white hover:bg-hover hover:shadow-lg hover:shadow-primary/25 focus:ring-primary/30'
-              }
-            `}
+            className={`rounded-lg px-4 py-2 font-medium transition-all duration-200 focus:outline-none focus:ring-4 ${
+              actionButton.variant === 'secondary'
+                ? 'bg-quaternary text-primary hover:bg-tertiary focus:ring-primary/20'
+                : 'bg-primary text-white hover:bg-hover hover:shadow-lg hover:shadow-primary/25 focus:ring-primary/30'
+            } `}
           >
             {actionButton.text}
           </button>
@@ -141,11 +122,7 @@ const TextBlock = ({
 
       {/* Hover Effect Line */}
       <div
-        className={`
-        absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-primary
-        to-secondary transition-all duration-300 group-hover:w-full
-        ${variant === 'outlined' ? 'hidden' : ''}
-      `}
+        className={`absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full ${variant === 'outlined' ? 'hidden' : ''} `}
       />
 
       {/* Shine Effect */}

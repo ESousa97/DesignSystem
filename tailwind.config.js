@@ -1,8 +1,3 @@
-function toRgba(cssVariable) {
-  const color = `var(${cssVariable})`
-  return ({ opacityValue }) => `rgba(${color}, ${opacityValue})`
-}
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
