@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "A comprehensive React component library for building consistent and accessible user interfaces",
+  "license": "SEE LICENSE IN LICENSE",
   "author": "ESousa97",
   "repository": {
     "type": "git",

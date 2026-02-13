@@ -5,7 +5,7 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/ESousa97/DesignSystem/ci.yml?style=flat&logo=github-actions&logoColor=white)](https://github.com/ESousa97/DesignSystem/actions/workflows/ci.yml)
 [![CodeQL](https://img.shields.io/github/actions/workflow/status/ESousa97/DesignSystem/codeql.yml?style=flat&logo=github-actions&logoColor=white&label=CodeQL)](https://github.com/ESousa97/DesignSystem/actions/workflows/codeql.yml)
 [![CodeFactor](https://img.shields.io/codefactor/grade/github/ESousa97/DesignSystem?style=flat&logo=codefactor&logoColor=white)](https://www.codefactor.io/repository/github/esousa97/designsystem)
-[![License](https://img.shields.io/github/license/ESousa97/DesignSystem?style=flat&logo=opensourceinitiative&logoColor=white)](LICENSE)
+[![License](https://img.shields.io/badge/License-Custom-lightgrey?style=flat&logo=opensourceinitiative&logoColor=white)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat&logo=typescript&logoColor=white)](#)
 [![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat&logo=react&logoColor=black)](#)
 [![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen?style=flat&logo=dependabot&logoColor=white)](#)
