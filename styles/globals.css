@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@reference "tailwindcss";
 
 @font-face {
   font-family: 'Mulish';
@@ -139,26 +140,6 @@
   html {
     scroll-behavior: smooth;
   }
-
-  /* Focus styles */
-  .focus-ring {
-    @apply focus:outline-none focus:ring-4 focus:ring-primary/30;
-  }
-
-  /* Button base styles */
-  .btn-base {
-    @apply font-medium transition-all duration-200 ease-in-out focus:outline-none focus:ring-4;
-  }
-
-  /* Card base styles */
-  .card-base {
-    @apply rounded-lg border border-outline/20 bg-white transition-all duration-200;
-  }
-
-  /* Input base styles */
-  .input-base {
-    @apply w-full rounded-lg border-2 transition-all duration-200 focus:outline-none;
-  }
 }
 
 @layer utilities {
@@ -254,55 +235,117 @@
 
   /* Hover effects */
   .hover-lift {
-    @apply transition-transform duration-200 ease-out hover:-translate-y-1;
+    transition: transform var(--transition-normal);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
   }
 
   .hover-grow {
-    @apply transition-transform duration-200 ease-out hover:scale-105;
+    transition: transform var(--transition-normal);
+  }
+
+  .hover-grow:hover {
+    transform: scale(1.05);
   }
 
   .hover-glow {
-    @apply transition-all duration-200 ease-out hover:shadow-lg hover:shadow-primary/25;
+    transition: box-shadow var(--transition-normal);
+  }
+
+  .hover-glow:hover {
+    box-shadow:
+      0 10px 15px -3px rgba(var(--primary), 0.25),
+      0 4px 6px -2px rgba(var(--primary), 0.2);
   }
 
   /* Glass morphism effect */
   .glass {
-    @apply border border-white/20 bg-white/80 backdrop-blur-md;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(16px);
   }
 
   .glass-dark {
-    @apply border border-gray-700/20 bg-gray-900/80 backdrop-blur-md;
+    border: 1px solid rgba(55, 65, 81, 0.2);
+    background-color: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(16px);
   }
 
   /* Text gradients */
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    background: linear-gradient(to right, rgba(var(--primary), 1), rgba(var(--secondary), 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .text-gradient-violet {
-    @apply bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent;
+    background: linear-gradient(to right, rgb(147, 51, 234), rgb(236, 72, 153));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   /* Loading skeleton */
   .skeleton {
-    @apply animate-shimmer rounded bg-gray-200;
+    animation: shimmer 2s infinite linear;
+    border-radius: 4px;
+    background-color: rgb(229, 231, 235);
   }
 
   /* Responsive text sizes */
   .text-responsive-sm {
-    @apply md:text-md lg:text-lg text-sm;
+    font-size: var(--text-sm);
   }
 
   .text-responsive-md {
-    @apply md:text-lg lg:text-xl text-md;
+    font-size: var(--text-md);
   }
 
   .text-responsive-lg {
-    @apply md:text-xl lg:text-2xl text-lg;
+    font-size: var(--text-lg);
   }
 
   .text-responsive-xl {
-    @apply md:text-2xl lg:text-3xl text-xl;
+    font-size: var(--text-xl);
+  }
+
+  @media (min-width: 768px) {
+    .text-responsive-sm {
+      font-size: var(--text-md);
+    }
+
+    .text-responsive-md {
+      font-size: var(--text-lg);
+    }
+
+    .text-responsive-lg {
+      font-size: var(--text-xl);
+    }
+
+    .text-responsive-xl {
+      font-size: var(--text-2xl);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text-responsive-sm {
+      font-size: var(--text-lg);
+    }
+
+    .text-responsive-md {
+      font-size: var(--text-xl);
+    }
+
+    .text-responsive-lg {
+      font-size: var(--text-2xl);
+    }
+
+    .text-responsive-xl {
+      font-size: var(--text-3xl);
+    }
   }
 
   /* Custom scrollbar */
@@ -330,7 +373,11 @@
 
   /* Focus visible for accessibility */
   .focus-visible-ring {
-    @apply focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/30;
+    outline: none;
+  }
+
+  .focus-visible-ring:focus-visible {
+    box-shadow: 0 0 0 4px rgba(var(--primary), 0.3);
   }
 }
 

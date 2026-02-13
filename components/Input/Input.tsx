@@ -104,7 +104,7 @@ function getVariantStyles(
 
 const LoadingSpinner = () => (
   <svg
-    className="h-4 w-4 animate-spin text-primary"
+    className="text-primary h-4 w-4 animate-spin"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
@@ -203,7 +203,7 @@ const LeftAdornment = ({ hasLeftIcon = false, leftIcon }: InputAdornmentProps) =
   if (!hasLeftIcon) return null
 
   return (
-    <div className="absolute left-3 top-1/2 z-10 -translate-y-1/2 transform text-icon">
+    <div className="text-icon absolute top-1/2 left-3 z-10 -translate-y-1/2 transform">
       {leftIcon}
     </div>
   )
@@ -217,7 +217,7 @@ const RightAdornment = ({
   if (!hasRightIcon) return null
 
   return (
-    <div className="absolute right-3 top-1/2 z-10 -translate-y-1/2 transform text-icon">
+    <div className="text-icon absolute top-1/2 right-3 z-10 -translate-y-1/2 transform">
       {loading ? <LoadingSpinner /> : rightIcon}
     </div>
   )
@@ -324,7 +324,7 @@ const Input = ({
         <div
           className={`pointer-events-none absolute inset-0 rounded-lg transition-all duration-200 ${
             !disabled && !hasError && !success
-              ? 'group-focus-within:ring-4 group-focus-within:ring-primary/20'
+              ? 'group-focus-within:ring-primary/20 group-focus-within:ring-4'
               : ''
           } `}
         />

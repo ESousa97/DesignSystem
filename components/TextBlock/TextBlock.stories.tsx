@@ -260,7 +260,7 @@ export const HelpCard: StoryObj<TextBlockProps> = {
 // Showcase
 export const AllVariants: StoryObj<TextBlockProps> = {
   render: () => (
-    <div className="md:grid-cols-2 grid max-w-4xl grid-cols-1 gap-6">
+    <div className="grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
       <TextBlock title="Padrão" textBlock={shortText} variant="default" />
       <TextBlock title="Elevado" textBlock={shortText} variant="elevated" />
       <TextBlock title="Contornado" textBlock={shortText} variant="outlined" />

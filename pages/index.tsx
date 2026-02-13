@@ -103,22 +103,22 @@ const App = () => {
   )
 
   return (
-    <div className="from-light min-h-screen bg-gradient-to-br via-quaternary/30 to-tertiary/20">
+    <div className="from-light via-quaternary/30 to-tertiary/20 min-h-screen bg-gradient-to-br">
       {/* Decorative background elements */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="-top-40 -right-40 w-80 h-80 absolute rounded-full bg-primary/10 blur-3xl" />
-        <div className="-bottom-40 -left-40 w-80 h-80 absolute rounded-full bg-secondary/10 blur-3xl" />
-        <div className="w-96 h-96 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-tertiary/5 blur-3xl" />
+        <div className="bg-primary/10 absolute -top-40 -right-40 h-80 w-80 rounded-full blur-3xl" />
+        <div className="bg-secondary/10 absolute -bottom-40 -left-40 h-80 w-80 rounded-full blur-3xl" />
+        <div className="bg-tertiary/5 absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 transform rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10">
         {/* Navigation */}
-        <nav className="glass sticky top-0 z-50 border-b border-outline/10">
+        <nav className="glass border-outline/10 sticky top-0 z-50 border-b">
           <div className="mx-auto max-w-7xl px-6 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-8">
-                <h1 className="text-2xl text-gradient font-bold">ALFABIT</h1>
-                <div className="md:flex hidden space-x-6">
+                <h1 className="text-gradient text-2xl font-bold">ALFABIT</h1>
+                <div className="hidden space-x-6 md:flex">
                   <Link href="#components" variant="subtle">
                     Componentes
                   </Link>
@@ -143,17 +143,17 @@ const App = () => {
         </nav>
 
         {/* Hero Section */}
-        <section className="py-20 px-6">
+        <section className="px-6 py-20">
           <div className="animate-fadeIn mx-auto max-w-6xl text-center">
-            <h1 className="text-4xl md:text-6xl mb-6 font-bold text-gray-primary">
+            <h1 className="text-gray-primary mb-6 text-4xl font-bold md:text-6xl">
               Design System
               <span className="text-gradient mt-2 block">Moderno & Modular</span>
             </h1>
-            <p className="mx-auto mb-8 max-w-3xl text-xl leading-relaxed text-gray-secondary">
+            <p className="text-gray-secondary mx-auto mb-8 max-w-3xl text-xl leading-relaxed">
               Construído com Next.js, Storybook e TailwindCSS para criar interfaces consistentes,
               escaláveis e de alta qualidade.
             </p>
-            <div className="sm:flex-row flex flex-col items-center justify-center gap-4">
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link href="#demo" variant="button" size="lg">
                 Ver Demonstração
               </Link>
@@ -162,17 +162,17 @@ const App = () => {
         </section>
 
         {/* Features Grid */}
-        <section id="components" className="py-16 px-6">
+        <section id="components" className="px-6 py-16">
           <div className="mx-auto max-w-7xl">
             <div className="mb-16 text-center">
-              <h2 className="text-3xl md:text-4xl mb-4 font-bold text-gray-primary"></h2>
-              <p className="mx-auto max-w-2xl text-lg text-gray-secondary">
+              <h2 className="text-gray-primary mb-4 text-3xl font-bold md:text-4xl"></h2>
+              <p className="text-gray-secondary mx-auto max-w-2xl text-lg">
                 Cada componente foi cuidadosamente projetado com foco em usabilidade, acessibilidade
                 e experiência do usuário.
               </p>
             </div>
 
-            <div className="md:grid-cols-2 lg:grid-cols-3 grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               <TextBlock
                 title="Botões Inteligentes"
                 textBlock="Múltiplas variações, tamanhos e estados. Suporte a ícones, loading e animações fluidas para uma experiência premium."
@@ -231,20 +231,20 @@ const App = () => {
         </section>
 
         {/* Interactive Demo */}
-        <section id="demo" className="py-16 bg-dark/30 px-6">
+        <section id="demo" className="bg-dark/30 px-6 py-16">
           <div className="mx-auto max-w-4xl">
             <div className="mb-12 text-center">
-              <h2 className="text-3xl mb-4 font-bold text-gray-primary">Demonstração Interativa</h2>
-              <p className="text-lg text-gray-secondary">Experimente nossos componentes em ação</p>
+              <h2 className="text-gray-primary mb-4 text-3xl font-bold">Demonstração Interativa</h2>
+              <p className="text-gray-secondary text-lg">Experimente nossos componentes em ação</p>
             </div>
 
             <div className="glass rounded-2xl p-8">
               <div className="space-y-8">
                 {/* Form Example */}
                 <div className="space-y-6">
-                  <h3 className="text-xl font-semibold text-gray-primary">Formulário de Contato</h3>
+                  <h3 className="text-gray-primary text-xl font-semibold">Formulário de Contato</h3>
 
-                  <div className="md:grid-cols-2 grid grid-cols-1 gap-6">
+                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                     <Input
                       label="Nome completo"
                       placeholder="Digite seu nome"
@@ -279,7 +279,7 @@ const App = () => {
                     helperText={`${message.length}/500 caracteres`}
                   />
 
-                  <div className="sm:flex-row flex flex-col gap-4">
+                  <div className="flex flex-col gap-4 sm:flex-row">
                     <Button
                       size="lg"
                       loading={loading}
@@ -304,7 +304,7 @@ const App = () => {
 
                 {/* Inputs Validação e Especial */}
                 <div className="space-y-6">
-                  <h3 className="text-xl font-semibold text-gray-primary">
+                  <h3 className="text-gray-primary text-xl font-semibold">
                     Validação e Exemplos Especiais
                   </h3>
 
@@ -312,7 +312,7 @@ const App = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <h3 className="text-xl font-semibold text-gray-primary">Tipos Especiais</h3>
+                  <h3 className="text-gray-primary text-xl font-semibold">Tipos Especiais</h3>
                   {renderSpecialTypeInputs('md:grid-cols-3 grid grid-cols-1 gap-6')}
                 </div>
               </div>
@@ -321,17 +321,17 @@ const App = () => {
         </section>
 
         {/* Component Showcase */}
-        <section id="examples" className="py-16 px-6">
-          <div className="space-y-16 mx-auto max-w-7xl">
+        <section id="examples" className="px-6 py-16">
+          <div className="mx-auto max-w-7xl space-y-16">
             {/* Buttons Section */}
             <div id="buttons" className="space-y-8">
-              <h3 className="text-2xl text-center font-bold text-gray-primary">
+              <h3 className="text-gray-primary text-center text-2xl font-bold">
                 Variações de Botões
               </h3>
 
-              <div className="md:grid-cols-3 grid grid-cols-1 gap-8">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-primary">Estilos Principais</h4>
+                  <h4 className="text-gray-primary font-semibold">Estilos Principais</h4>
                   <div className="space-y-3">
                     <Button fullWidth>Primário</Button>
                     <Button variant="secondary" fullWidth>
@@ -347,7 +347,7 @@ const App = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-primary">Tamanhos</h4>
+                  <h4 className="text-gray-primary font-semibold">Tamanhos</h4>
                   <div className="space-y-3">
                     <Button size="sm" fullWidth>
                       Pequeno
@@ -365,7 +365,7 @@ const App = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-primary">Com Ícones</h4>
+                  <h4 className="text-gray-primary font-semibold">Com Ícones</h4>
                   <div className="space-y-3">
                     <Button icon={<FiStar />} iconPosition="left" fullWidth>
                       Favoritar
@@ -389,7 +389,7 @@ const App = () => {
               </div>
 
               <div className="text-center">
-                <div className="inline-flex flex-wrap gap-4 rounded-2xl bg-tertiary/10 p-6">
+                <div className="bg-tertiary/10 inline-flex flex-wrap gap-4 rounded-2xl p-6">
                   <Button className="theme-violet">Tema Violeta</Button>
                   <Button variant="secondary" className="theme-violet">
                     Secundário Violeta
@@ -403,13 +403,13 @@ const App = () => {
 
             {/* Inputs Section */}
             <div id="inputs" className="space-y-8">
-              <h3 className="text-2xl text-center font-bold text-gray-primary">
+              <h3 className="text-gray-primary text-center text-2xl font-bold">
                 Campos de Entrada
               </h3>
 
-              <div className="md:grid-cols-2 lg:grid-cols-3 grid grid-cols-1 gap-8">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-primary">Variações</h4>
+                  <h4 className="text-gray-primary font-semibold">Variações</h4>
                   <div className="space-y-4">
                     <Input placeholder="Input padrão" variant="default" />
                     <Input placeholder="Input preenchido" variant="filled" />
@@ -418,12 +418,12 @@ const App = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-primary">Com Validação</h4>
+                  <h4 className="text-gray-primary font-semibold">Com Validação</h4>
                   {renderValidationInputs('space-y-4')}
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-primary">Tipos Especiais</h4>
+                  <h4 className="text-gray-primary font-semibold">Tipos Especiais</h4>
                   {renderSpecialTypeInputs('space-y-4')}
                 </div>
               </div>
@@ -431,13 +431,13 @@ const App = () => {
 
             {/* Links Section */}
             <div id="links" className="space-y-8">
-              <h3 className="text-2xl text-center font-bold text-gray-primary">
+              <h3 className="text-gray-primary text-center text-2xl font-bold">
                 Navegação e Links
               </h3>
 
-              <div className="md:grid-cols-2 lg:grid-cols-4 grid grid-cols-1 gap-8">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-primary">Estilos</h4>
+                  <h4 className="text-gray-primary font-semibold">Estilos</h4>
                   <div className="space-y-3">
                     <div>
                       <Link href="#" variant="default">
@@ -463,7 +463,7 @@ const App = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-primary">Com Ícones</h4>
+                  <h4 className="text-gray-primary font-semibold">Com Ícones</h4>
                   <div className="space-y-3">
                     <div>
                       <Link href="#" icon={<FiHome />} iconPosition="left">
@@ -489,7 +489,7 @@ const App = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-primary">Externos</h4>
+                  <h4 className="text-gray-primary font-semibold">Externos</h4>
                   <div className="space-y-3">
                     <div>
                       <Link href="https://github.com" external>
@@ -515,7 +515,7 @@ const App = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <h4 className="font-semibold text-gray-primary">Tema Violeta</h4>
+                  <h4 className="text-gray-primary font-semibold">Tema Violeta</h4>
                   <div className="space-y-3">
                     <div>
                       <Link href="#" className="theme-violet">
@@ -545,11 +545,11 @@ const App = () => {
 
             {/* TextBlocks Section */}
             <div className="space-y-8">
-              <h3 className="text-2xl text-center font-bold text-gray-primary">
+              <h3 className="text-gray-primary text-center text-2xl font-bold">
                 Blocos de Conteúdo
               </h3>
 
-              <div className="md:grid-cols-2 grid grid-cols-1 gap-8">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                 <TextBlock
                   title="Desenvolvimento Ágil"
                   textBlock="Acelere seu processo de desenvolvimento com componentes prontos, testados e otimizados para performance."
@@ -603,9 +603,9 @@ const App = () => {
         </section>
 
         {/* Footer */}
-        <footer className="py-12 mt-20 bg-dark/50 px-6">
+        <footer className="bg-dark/50 mt-20 px-6 py-12">
           <div className="mx-auto max-w-6xl">
-            <div className="md:grid-cols-4 grid grid-cols-1 gap-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
               <div className="space-y-4">
                 <h3 className="text-gradient text-xl font-bold">ALFABIT</h3>
                 <p className="text-gray-secondary">
@@ -622,7 +622,7 @@ const App = () => {
               </div>
 
               <div className="space-y-4">
-                <h4 className="font-semibold text-gray-primary">Componentes</h4>
+                <h4 className="text-gray-primary font-semibold">Componentes</h4>
                 <div className="space-y-2">
                   <div>
                     <Link href="#buttons" variant="subtle">
@@ -648,7 +648,7 @@ const App = () => {
               </div>
 
               <div className="space-y-4">
-                <h4 className="font-semibold text-gray-primary">Recursos</h4>
+                <h4 className="text-gray-primary font-semibold">Recursos</h4>
                 <div className="space-y-2">
                   <div>
                     <Link href="#" variant="subtle">
@@ -674,7 +674,7 @@ const App = () => {
               </div>
 
               <div className="space-y-4">
-                <h4 className="font-semibold text-gray-primary">Suporte</h4>
+                <h4 className="text-gray-primary font-semibold">Suporte</h4>
                 <div className="space-y-2">
                   <div>
                     <Link href="#" variant="subtle">
@@ -700,7 +700,7 @@ const App = () => {
               </div>
             </div>
 
-            <div className="mt-8 border-t border-outline/20 pt-8 text-center">
+            <div className="border-outline/20 mt-8 border-t pt-8 text-center">
               <p className="text-gray-tertiary">
                 © 2025 ALFABIT Design System. Desenvolvido por Jose Enoque
               </p>

@@ -280,7 +280,7 @@ export const UsageExamples: StoryObj<LinkProps> = {
   render: () => (
     <div className="max-w-md space-y-6">
       <div className="space-y-2">
-        <h3 className="font-semibold text-gray-primary">Navegação</h3>
+        <h3 className="text-gray-primary font-semibold">Navegação</h3>
         <div className="flex space-x-4">
           <Link href="#" variant="subtle">
             Home
@@ -298,7 +298,7 @@ export const UsageExamples: StoryObj<LinkProps> = {
       </div>
 
       <div className="space-y-2">
-        <h3 className="font-semibold text-gray-primary">Ações</h3>
+        <h3 className="text-gray-primary font-semibold">Ações</h3>
         <div className="flex space-x-4">
           <Link href="#" variant="button">
             Comprar agora
@@ -310,7 +310,7 @@ export const UsageExamples: StoryObj<LinkProps> = {
       </div>
 
       <div className="space-y-2">
-        <h3 className="font-semibold text-gray-primary">Documentos</h3>
+        <h3 className="text-gray-primary font-semibold">Documentos</h3>
         <div className="space-y-1">
           <div>
             <Link href="#" icon="📄" iconPosition="left">
