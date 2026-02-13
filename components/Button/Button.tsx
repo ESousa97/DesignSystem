@@ -117,15 +117,7 @@ const Button = ({
 
   return (
     <button
-      className={`
-        relative overflow-hidden font-medium
-        ${rounded ? 'rounded-full' : 'rounded-lg'}
-        ${getSizeStyles(size)}
-        ${getVariantStyles(variant, isDisabled)}
-        ${fullWidth ? 'w-full' : 'inline-flex'}
-        items-center justify-center gap-2
-        ${className}
-      `}
+      className={`relative overflow-hidden font-medium ${rounded ? 'rounded-full' : 'rounded-lg'} ${getSizeStyles(size)} ${getVariantStyles(variant, isDisabled)} ${fullWidth ? 'w-full' : 'inline-flex'} items-center justify-center gap-2 ${className} `}
       disabled={isDisabled}
       {...rest}
     >
