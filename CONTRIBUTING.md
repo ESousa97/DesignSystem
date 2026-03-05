@@ -1,5 +1,8 @@
 # Contributing to ALFABIT Design System
 
+> [!WARNING]
+> **REPOSITÓRIO ARQUIVADO**: Este projeto não está mais ativo e permanece público apenas para fins de estudo. **Não estamos aceitando contribuições** e Pull Requests não serão revisados ou mesclados.
+
 Obrigado por considerar contribuir para o ALFABIT Design System! 🎉
 
 ## 📋 Índice

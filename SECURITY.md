@@ -1,5 +1,8 @@
 # Política de Segurança
 
+> [!WARNING]
+> **REPOSITÓRIO ARQUIVADO**: Este projeto não está mais ativo e permanece público apenas para fins de estudo. **Não há garantia de correção para quaisquer vulnerabilidades encontradas**.
+
 ## Versões Suportadas
 
 | Versão | Suportada          |

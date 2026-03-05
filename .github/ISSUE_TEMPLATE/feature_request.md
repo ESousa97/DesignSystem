@@ -6,6 +6,9 @@ labels: ['enhancement', 'triage']
 assignees: ''
 ---
 
+> [!WARNING]
+> **REPOSITÓRIO ARQUIVADO**: Este projeto não está mais ativo e permanece público apenas para fins de estudo. Issues não serão respondidas ou resolvidas.
+
 ## 🎯 Problem Statement
 
 A clear and concise description of what the problem is or what gap exists.

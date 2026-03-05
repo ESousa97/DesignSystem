@@ -7,6 +7,10 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 
 ## [Unreleased]
 
+### Status
+
+- **REPOSITÓRIO ARQUIVADO**: O projeto foi desativado em 2026-03-04. Permanece público apenas para fins de estudo. Dependabot e templates foram atualizados para refletir este status.
+
 ### Added
 
 - Componente `LoadingSpinner` compartilhado para reutilização

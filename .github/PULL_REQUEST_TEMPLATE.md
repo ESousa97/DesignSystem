@@ -1,3 +1,6 @@
+> [!WARNING]
+> **REPOSITÓRIO ARQUIVADO**: Este projeto não está mais ativo e permanece público apenas para fins de estudo. Pull Requests não serão revisados ou mesclados.
+
 ## 📋 Description
 
 <!-- Provide a brief description of what this PR does -->
